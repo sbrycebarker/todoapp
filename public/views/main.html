@@ -1,0 +1,22 @@
+
+
+
+
+<div class="newTask">
+<input class="data" type="text" name="text" ng-model="text" placeholder="Enter Task">
+
+<button class="submit" ng-click="postData( { text:text } )">Create Task</button>
+</div>
+
+
+<div class="box">
+<div class="stuff" ng-repeat="data in data">
+  <ul><li> TEXT: {{data.text}}</li><li> ID: {{data.text_id}}</li></ul>
+
+  <input class="update" type="text" name="update" ng-model="item" placeholder="Change Task">
+
+  <button class="change" ng-click="changeData( { id : data.text_id , item } )"> Change Item</button>
+
+  <button ng-click="deleteText(data.text_id)">Delete Item</buttom></ul>
+</div>
+</div>
