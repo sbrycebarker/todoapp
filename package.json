@@ -19,6 +19,7 @@
   "dependencies": {
     "express": "^4.15.2",
     "massive": "^2.6.0",
+    "moment": "^2.18.1",
     "session": "^0.1.0"
   }
 }

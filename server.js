@@ -3,6 +3,7 @@ const express = require('express'),
       bodyParser = require('body-parser'),
       massive = require('massive'),
       cors = require('cors'),
+      moment = require('moment')
       request = require('request');
 
 
@@ -14,7 +15,8 @@ const express = require('express'),
 
   app.post('/send', function(req, res) {
     db.postdata([req.body.text], function(err, data) {
-
+      var c = moment().calendar();
+      console.log(c)
     })
   })
 
@@ -32,8 +34,7 @@ app.delete('/delete/:id', function(req, params) {
 })
 
 app.put('/change/:id', function(req, res, params) {
-  console.log(req.body)
-  db.changedata([req.params.id, req.body.text], function (err) {
+  db.changedata([req.body.id, req.body.item], function (err, results) {
     console.log(err)
     res.send("hello")
   })
