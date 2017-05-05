@@ -18,12 +18,12 @@
 
 
 <div class="stuff" ng-repeat="data in data | orderBy: 'text_id' "  >
-  <ul><div class="task">TASK : {{data.text}} {{data.text_id}} {{data.date}}</div></ul>
+  <ul><div class="task">TASK : {{data.text}} {{data.text_id}} Created on {{data.date}}</div></ul>
 
   <input class="update" type="text" name="update" ng-model="item" placeholder="Change Task">
 
   <button class="change" ng-click="changeData( { id : data.text_id , item } )"> Change Task</button>
 
-  <button ng-click="deleteText(data.text_id)">Finished Task</buttom></ul>
+  <button class="delete" ng-click="deleteText(data.text_id)"><img class="trash" src="./views/img/trash-512.png"></buttom></ul>
 </div>
 </div>

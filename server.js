@@ -14,9 +14,9 @@ const express = require('express'),
       const db = massive.connectSync({connectionString: 'postgres://postgres:1234a@localhost/testDB'})
 
   app.post('/send', function(req, res) {
-    db.postdata([req.body.text], function(err, data) {
-      var c = moment().calendar();
-      console.log(c)
+    var date = moment().calendar();
+    db.postdata([req.body.text, date], function(err, data) {
+
     })
   })
 

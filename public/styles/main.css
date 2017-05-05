@@ -21,12 +21,14 @@ background-size: cover;
   margin-bottom: 15px;
   border-radius: 0 0 25px 25px;
 }
-
+.update {
+  margin-bottom: 10px;
+}
 .box {
   margin: auto;
   position: relative;
   height: auto;
-  width: 600px;
+  width: 75%;
   background-color: black;
   top: 25px;
   padding: 10px;
@@ -41,7 +43,8 @@ background-size: cover;
   height: auto;
   width: 400px;
   background-color: blue;
-  opacity: .8
+  float: left;
+  padding-left: 5px;
 }
 
 .box h3 {
@@ -74,7 +77,8 @@ text-align: center;
 .task {
   height: auto;
   width: 200px;
-  background-color: grey;
+  background-color: black;
+  color: white
 }
 
 .time {
@@ -85,8 +89,17 @@ text-align: center;
   background-color: red;
   color: white;
 }
+.trash {
+  height: 25px;
+  width: 25px;
+  background-color: blue;
+}
 
-
+.delete {
+  background-color: blue;
+  border: none;
+  bottom: -10px;
+}
 .show {
   display:block;
 }
