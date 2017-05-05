@@ -11,12 +11,15 @@ const express = require('express'),
       app.use(cors());
       app.use(bodyParser.json())
 
+
       const db = massive.connectSync({connectionString: 'postgres://postgres:1234a@localhost/testDB'})
+
 
   app.post('/send', function(req, res) {
     var date = moment().calendar();
     db.postdata([req.body.text, date], function(err, data) {
 
+      console.log(moment().calendar())
     })
   })
 
@@ -28,14 +31,12 @@ const express = require('express'),
 
 app.delete('/delete/:id', function(req, params) {
   db.removedata([req.params.id], function(err) {
-    console.log(err)
-    console.log(params)
+    console.log("id err", err)
   })
 })
 
 app.put('/change/:id', function(req, res, params) {
   db.changedata([req.body.id, req.body.item], function (err, results) {
-    console.log(err)
     res.send("hello")
   })
 })
@@ -47,6 +48,6 @@ app.use(express.static('./public'))
 
   app.listen(port, function() {
 
-    console.log("listining on port" + port)
+    console.log("listining on port " + port)
 
   })
