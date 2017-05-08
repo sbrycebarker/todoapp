@@ -6,4 +6,11 @@ angular.module('myApp', ['ui.router']).config(function($urlRouterProvider, $stat
             templateUrl: "./views/main.html",
             controller: 'mainCtrl'
           })
+
 })
+
+// .filter('startFrom', function() {
+//             return function(data, start) {
+//               return data.slice(start);
+//             }
+//           })

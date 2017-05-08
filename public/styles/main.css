@@ -26,7 +26,7 @@ background-size: cover;
 .box {
   margin: auto;
   position: relative;
-  height: auto;
+  height: 700px;
   width: 70%;
   background-color: #30C0F4;
   top: 25px;
@@ -34,6 +34,7 @@ background-size: cover;
   flex-direction: column;
   border-radius: 2.5%;
   opacity: .8 inherit;
+  box-shadow: 10px 10px 5px black;
 }
 
 .stuff {
@@ -78,7 +79,7 @@ text-decoration: underline;
 
 .about {
     position: absolute;
-    top: 200px;
+    top: 300px;
     height: 50px;
     width: 200px;
     background-color: black;
@@ -113,7 +114,7 @@ text-decoration: underline;
   width: 25px;
   background-color: #30C0F4;
   cursor: pointer;
-  border-radius: 25%;
+  border-radius: 20%;
 }
 .change {
   cursor: pointer;
@@ -124,7 +125,7 @@ text-decoration: underline;
   background-color: #30C0F4;
   border: none;
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 20%;
   bottom: 6px;
   right: 40px;
 }
