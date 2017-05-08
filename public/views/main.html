@@ -13,7 +13,7 @@
 
 
 <div class="stuff" ng-repeat="data in data | limitTo: 5 | orderBy: 'text_id'"  >
-  <ul><div class="task">TASK : {{data.text}} Created on {{data.date | date : 'mediumDate' }}</div></ul>
+  <ul><div class="task">TASK : {{data.text}} {{data.text_id}} Created on {{data.date | date : 'mediumDate' }}</div></ul>
 
   <input class="update" type="text" name="update" ng-model="item" placeholder="Change Task">
 
