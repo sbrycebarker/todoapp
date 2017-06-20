@@ -11,22 +11,44 @@ background: url("../views/img/NY.jpg") no-repeat center center fixed;
 background-size: cover;
 }
 
+.pagenav {
+  position: relative;
+  margin: 0 auto;
+  bottom: 60px;
 
+}
+
+.pages {
+  position: relative;
+  box-shadow: 10px 10px 5px white;
+
+}
 
 .newTask {
-  height: 100px;
+  height: 80px;
   width: 200px;
-  background-color: black;
-  margin: 0;
+  position: absolute;
+  background-color: grey;
   margin-bottom: 15px;
+  text-shadow: 10px 10px 5px black;
 }
 .update {
   margin-bottom: 10px;
 }
+
+.cal {
+  height: 15x;
+  width: 15px;
+  margin-right: 5px;
+}
+
+h3 {
+  text-shadow: 10px 10px 5px black;
+}
 .box {
   margin: auto;
   position: relative;
-  height: 700px;
+  height: 800px;
   width: 70%;
   background-color: #30C0F4;
   top: 25px;
@@ -34,7 +56,7 @@ background-size: cover;
   flex-direction: column;
   border-radius: 2.5%;
   opacity: .8 inherit;
-  box-shadow: 10px 10px 5px black;
+  box-shadow: 10px 10px 5px black 
 }
 
 .stuff {
@@ -43,6 +65,7 @@ background-size: cover;
   height: auto;
   width: 400px;
   background-color: black;
+  top: -100px;
   float: left;
   padding-left: 5px;
   border-radius: 2%;
@@ -65,7 +88,10 @@ text-decoration: underline;
     font-size: 16px;
     border: none;
     cursor: pointer;
+    margin: 0;
     margin-top: 100px;
+    box-shadow: 10px 10px 5px grey;
+
 }
 
 .dropbtn:hover, .dropbtn:focus {
@@ -75,7 +101,8 @@ text-decoration: underline;
 .dropdown {
     position: absolute;
     display: inline-block;
-    margin: 0
+    margin: 0;
+    text-shadow: 10px 10px 5px black;
 }
 
 .about {
@@ -90,7 +117,24 @@ text-decoration: underline;
     margin: 0 0;
     text-align: center;
     vertical-align: middle;
+    box-shadow: 10px 10px 5px grey;
 
+}
+
+.abouttext {
+  height: 150px;
+  width: 450px;
+  background-color: black;
+  position: absolute;
+  top: 25px;
+  left: 100px;
+  border-radius: 15px;
+}
+
+.abouttext h1 {
+  margin: 10px;
+  color: white;
+  text-decoration: underline;
 }
 
 .task {

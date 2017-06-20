@@ -1,4 +1,4 @@
-angular.module('myApp', ['ui.router']).config(function($urlRouterProvider, $stateProvider){
+angular.module('myApp', ['ui.router', 'ui.bootstrap']).config(function($urlRouterProvider, $stateProvider){
   $urlRouterProvider.when('', '/');
           $stateProvider
           .state('home', {
@@ -6,11 +6,12 @@ angular.module('myApp', ['ui.router']).config(function($urlRouterProvider, $stat
             templateUrl: "./views/main.html",
             controller: 'mainCtrl'
           })
-
-})
-
-// .filter('startFrom', function() {
-//             return function(data, start) {
-//               return data.slice(start);
-//             }
-//           })
+          .state('about', {
+            url: '/about',
+            templateUrl: "./views/about.html"
+          })
+})        .filter('startFrom', function() {
+            return function(data, start) {
+              return data.slice(start);
+            }
+          })

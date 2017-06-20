@@ -8,12 +8,22 @@
   <button id="myBtn" class="dropbtn" ng-click="showmenu = !showmenu">New Task</button>
   <new-task ng-show="showmenu"></new-task>
   </div>
-    <div class="about">About</div>
-<!-- <uib-pagination class="page" totalItems="data.length" ng-model="currentPage" itemsPerPage="pageSize"></uib-pagination> -->
+    <div class="about" ui-sref="about">About</div>
 
 
-<div class="stuff" ng-repeat="data in data | limitTo: 5 | orderBy: 'text_id'"  >
-  <ul><div class="task">TASK : {{data.text}} {{data.text_id}} Created on {{data.date | date : 'mediumDate' }}</div></ul>
+
+<div class="stuff" ng-repeat="data in data | startFrom: (currentPage - 1) * pageSize  | limitTo: pageSize | orderBy: 'text_id'">
+<ul>
+    <div class="task">
+      <div>
+    TASK : {{data.text}}
+      </div>
+      <div>
+        <img class="cal" src="./views/img/whitecal.png">  {{data.date | date : 'mediumDate' }}
+       </div>
+    </div>
+</ul>
+
 
   <input class="update" type="text" name="update" ng-model="item" placeholder="Change Task">
 
@@ -22,5 +32,8 @@
   <button class="delete" ng-click="deleteText(data.text_id, $index)"><img class="trash" src="./views/img/trash2.png"></buttom></ul>
 
 </div>
+<div class="pagenav"><ul class="pages" uib-pagination total-items="data.length" ng-model="currentPage" items-per-page="pageSize"></ul></div>
+
+
 
 </div>

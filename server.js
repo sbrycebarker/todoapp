@@ -2,8 +2,9 @@ const express = require('express'),
       session = require('express-session'),
       bodyParser = require('body-parser'),
       massive = require('massive'),
+      http = require('http'),
       cors = require('cors'),
-      moment = require('moment')
+      moment = require('moment'),
       request = require('request');
 
 
@@ -18,8 +19,12 @@ const express = require('express'),
   app.post('/send', function(req, res) {
     var date = moment().calendar();
     db.postdata([req.body.text, date], function(err, data) {
-
       console.log(moment().calendar())
+      if (err){
+        res.status(500).json(err)
+      }else {
+        res.status(200).json(data)
+      }
     })
   })
 

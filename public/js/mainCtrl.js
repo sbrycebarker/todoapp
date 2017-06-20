@@ -10,11 +10,9 @@ angular.module('myApp').controller('mainCtrl', function($scope, mainService) {
     $scope.getData = function() {
       mainService.getData().then(function(results){
         $scope.data = results.data
-        console.log(results.data)
+        // console.log("cart", results.data)
       })
     }
-
-
     $scope.getData()
 
     $scope.deleteText = function(id, i) {
@@ -35,5 +33,6 @@ angular.module('myApp').controller('mainCtrl', function($scope, mainService) {
 
     $scope.showmenu = false;
     $scope.pageSize = 5;
+    $scope.currentPage = 1;
 
 })

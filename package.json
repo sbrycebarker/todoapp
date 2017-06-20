@@ -22,7 +22,7 @@
     "cors": "^2.8.3",
     "express": "^4.15.2",
     "express-session": "^1.15.2",
-    "massive": "^2.6.0",
+    "massive": "^2.6.1",
     "moment": "^2.18.1",
     "request": "^2.81.0",
     "session": "^0.1.0"
