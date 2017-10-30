@@ -6,7 +6,7 @@ const express = require('express'),
       cors = require('cors'),
       moment = require('moment'),
       request = require('request');
-      constring = "postgres://postgres:1234a@localhost/testDB";
+      constring = "postgres://egfawyvj:FgyMFj5vkAOv2IHCogUfelkzfxErVoae@tantor.db.elephantsql.com:5432/egfawyvj";
 
 
       const app = express();
