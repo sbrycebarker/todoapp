@@ -6,15 +6,25 @@ const express = require('express'),
       cors = require('cors'),
       moment = require('moment'),
       request = require('request');
+      constring = "postgres://postgres:1234a@localhost/testDB";
 
 
-      var app = express()
+      const app = express();
+
       app.use(cors());
       app.use(bodyParser.json())
 
+      // app.use(session({
+      //   resave: true, //Without this you get a constant warning about default values
+      //   saveUninitialized: true, //Without this you get a constant warning about default values
+      // }))
+      app.use(express.static('./public'))
 
-      const db = massive.connectSync({connectionString: 'postgres://postgres:1234a@localhost/testDB'})
 
+      // const db = massive.connectSync({connectionString: 'postgres://postgres:1234a@localhost/testDB'})
+      // massive(constring).then((db) => {
+      //     app.set('db', db);
+      // })
 
   app.post('/send', function(req, res) {
     var date = moment().calendar();
@@ -46,7 +56,6 @@ app.put('/change/:id', function(req, res, params) {
   })
 })
 
-app.use(express.static('./public'))
 
       var port = 8084
 
