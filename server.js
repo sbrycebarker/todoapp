@@ -48,7 +48,7 @@ app.put('/change/:id', function(req, res, params) {
 
 app.use(express.static('./public'))
 
-      var port = 80
+      var port = 8084
 
 
   app.listen(port, function() {
