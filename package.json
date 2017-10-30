@@ -2,7 +2,7 @@
   "name": "todoapp",
   "version": "1.0.0",
   "description": "pretty to do",
-  "main": "service.js",
+  "main": "mainService.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
