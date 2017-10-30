@@ -1,6 +1,7 @@
 angular.module('myApp').controller('mainCtrl', function($scope, mainService) {
 
     $scope.postData = function( data ) {
+      console.log("ctrl", data)
       mainService.postData( data )
       $scope.data.push(data)
 
@@ -16,6 +17,7 @@ angular.module('myApp').controller('mainCtrl', function($scope, mainService) {
     $scope.getData()
 
     $scope.deleteText = function(id, i) {
+      console.log("delete", id , i)
       var removedItem = $scope.data.splice(i, 1)
       mainService.deleteText(id).then(function() {
       //  $scope.data.splice(i, 1)
@@ -27,8 +29,10 @@ angular.module('myApp').controller('mainCtrl', function($scope, mainService) {
     }
 
     $scope.changeData = function( item, i) {
-      mainService.changeData(item);
-      $scope.data[i].text = item.newtask
+      console.log(item, i)
+      mainService.changeData(item)
+      // console.log(item)
+      $scope.data[i].task = item.newtask
     }
 
     $scope.showmenu = false;

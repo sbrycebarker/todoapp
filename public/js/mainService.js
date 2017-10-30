@@ -24,6 +24,7 @@ angular.module('myApp').service('mainService', function($http) {
     }
 
     this.changeData = function(item) {
+      console.log(item)
       return $http({
         method: 'PUT',
         url: '/change/' + item.id,

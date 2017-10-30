@@ -10,7 +10,8 @@ angular.module('myApp', ['ui.router', 'ui.bootstrap']).config(function($urlRoute
             url: '/about',
             templateUrl: "./views/about.html"
           })
-})        .filter('startFrom', function() {
+        })
+.filter('startFrom', function() {
             return function(data, start) {
               return data.slice(start);
             }

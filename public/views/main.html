@@ -12,11 +12,11 @@
 
 
 
-<div class="stuff" ng-repeat="data in data | startFrom: (currentPage - 1) * pageSize  | limitTo: pageSize | orderBy: 'text_id'">
+<div class="stuff" ng-repeat="data in data | startFrom: (currentPage - 1) * pageSize  | limitTo: pageSize | orderBy: 'task_id'">
 <ul>
     <div class="task">
       <div>
-    TASK : {{data.text}}
+    TASK : {{data.task}} {{data.task_id}}
       </div>
       <div>
         <img class="cal" src="./views/img/whitecal.png">  {{data.date | date : 'mediumDate' }}
@@ -27,9 +27,9 @@
 
   <input class="update" type="text" name="update" ng-model="item" placeholder="Change Task">
 
-  <button class="change" ng-click="changeData( { id : data.text_id , newtask: item }, $index )"> Change Task</button>
+  <button class="change" ng-click="changeData( { id : data.task_id , newtask: item }, $index )"> Change Task</button>
 
-  <button class="delete" ng-click="deleteText(data.text_id, $index)"><img class="trash" src="./views/img/trash2.png"></buttom></ul>
+  <button class="delete" ng-click="deleteText(data.task_id, $index)"><img class="trash" src="./views/img/trash2.png"></buttom></ul>
 
 </div>
 <div class="pagenav"><ul class="pages" uib-pagination total-items="data.length" ng-model="currentPage" items-per-page="pageSize"></ul></div>
