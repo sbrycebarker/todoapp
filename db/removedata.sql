@@ -1,2 +1,2 @@
 delete from data
-where text_id = $1
+where task_id = $1

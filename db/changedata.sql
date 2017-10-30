@@ -1,3 +1,3 @@
 UPDATE data
 SET text = $2
-WHERE text_id = $1;
+WHERE task_id = $1;

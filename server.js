@@ -22,9 +22,18 @@ const express = require('express'),
 
 
       // const db = massive.connectSync({connectionString: 'postgres://postgres:1234a@localhost/testDB'})
-      // massive(constring).then((db) => {
-      //     app.set('db', db);
-      // })
+      massive(constring).then((db) => {
+          app.set('db', db);
+          db.createtable().then(
+            function() {
+              console.log("data table created")
+            }
+          )
+          .catch(
+            function(err){
+              console.log("data table err", err)
+            })
+      })
 
   app.post('/send', function(req, res) {
     var date = moment().calendar();
