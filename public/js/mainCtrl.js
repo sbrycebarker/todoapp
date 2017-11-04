@@ -1,10 +1,10 @@
 angular.module('myApp').controller('mainCtrl', function($scope, mainService) {
 
     $scope.postData = function( data ) {
-      console.log("ctrl", data)
+      console.log(data)
       mainService.postData( data )
       $scope.data.push(data)
-
+      $scope.getData()
     }
 
 
@@ -14,13 +14,13 @@ angular.module('myApp').controller('mainCtrl', function($scope, mainService) {
         // console.log("cart", results.data)
       })
     }
-    $scope.getData()
+    $scope.getData();
 
     $scope.deleteText = function(id, i) {
       console.log("delete", id , i)
       var removedItem = $scope.data.splice(i, 1)
       mainService.deleteText(id).then(function() {
-      //  $scope.data.splice(i, 1)
+       $scope.data.splice(i, 1)
     }, function(err) {
       $scope.data.splice(i, 0, removedItem[0]);
     });
@@ -32,7 +32,8 @@ angular.module('myApp').controller('mainCtrl', function($scope, mainService) {
       console.log(item, i)
       mainService.changeData(item)
       // console.log(item)
-      $scope.data[i].task = item.newtask
+      var newtask = item.newtask
+      $scope.data[i].task = newtask
     }
 
     $scope.showmenu = false;
