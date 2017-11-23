@@ -37,7 +37,7 @@ const express = require('express'),
             db.getsql().then( data => {
 
               res.status(200).json(data)
-              console.log(data)
+              // console.log(data)
             })
           })
           app.post('/send', function(req, res) {

@@ -7,6 +7,11 @@
   <div class="dropdown">
   <button id="myBtn" class="dropbtn" ng-click="showmenu = !showmenu">New Task</button>
   <new-task ng-show="showmenu"></new-task>
+  <!-- <div class="newTask" style:" margin: 0;">
+  <input id="taskdata" class="data" name="task" ng-model="text" placeholder="Enter Task">
+
+  <button id="submit" class="submit" ng-click="postData( {text:text} )">Create Task</button>
+  </div> -->
   </div>
     <div class="about" ui-sref="about">About</div>
 
@@ -25,11 +30,11 @@
 </ul>
 
 
-  <input class="update" type="text" name="update" ng-model="item" placeholder="Change Task">
+  <input id="update" class="update" type="text" name="update" ng-model="item" placeholder="Change Task">
 
-  <button class="change" ng-click="changeData( { id : data.task_id , newtask: item }, $index )"> Change Task</button>
+  <button id="change" class="change" ng-click="changeData( { id : data.task_id , newtask: item }, $index )"> Change Task</button>
 
-  <button class="delete" ng-click="deleteText(data.task_id, $index)"><img class="trash" src="./views/img/trash2.png"></buttom></ul>
+  <button class="delete" ng-click="deleteText(data.task_id, $index)"><i class="fa fa-trash trash" aria-hidden="true"></i></buttom>
 
 </div>
 <div class="pagenav"><ul class="pages" uib-pagination total-items="data.length" ng-model="currentPage" items-per-page="pageSize"></ul></div>
