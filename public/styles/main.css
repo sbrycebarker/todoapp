@@ -29,6 +29,7 @@ background-size: cover;
   width: 200px;
   position: absolute;
   background-color: grey;
+  margin-top: -50px;
   margin-bottom: 15px;
   text-shadow: 10px 10px 5px black;
 }
@@ -44,6 +45,7 @@ background-size: cover;
 
 h3 {
   text-shadow: 10px 10px 5px black;
+  z-index: 0
 }
 
 .box {
@@ -66,15 +68,21 @@ h3 {
   box-shadow: 10px 10px 5px black
 }
 
+.stuffcon {
+  height: 75%;
+  width: 33%;
+  z-index: 0px;
+  margin: auto;
+  justify-content: center;
+  vertical-align: middle;
+}
+
 .stuff {
-  margin: 10px auto 10px auto;
+  margin: 10px auto;
   position: relative;
   height: auto;
   width: 400px;
   background-color: black;
-  top: -100px;
-  float: left;
-  padding-left: 5px;
   border-radius: 10px;
   opacity: 1;
   box-shadow: 10px 10px 5px white;
@@ -86,6 +94,16 @@ text-align: center;
 text-decoration: underline;
 }
 
+.sidebar {
+  height: 800px;
+  width: 350px;
+  position: absolute;
+  border-right: 4px solid black;
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+}
+
 .dropbtn {
     height: auto;
     width: 200px;
@@ -95,10 +113,8 @@ text-decoration: underline;
     font-size: 16px;
     border: none;
     cursor: pointer;
-    margin: 0;
     margin-top: 100px;
     box-shadow: 10px 10px 5px grey;
-
 }
 
 .dropbtn:hover, .dropbtn:focus {
@@ -106,26 +122,36 @@ text-decoration: underline;
 }
 
 .dropdown {
-    position: absolute;
-    display: inline-block;
-    margin: 0;
-    text-shadow: 10px 10px 5px black;
+  margin: 0 auto;
+  text-shadow: 10px 10px 5px black;
+}
+
+.bttns {
+  height: auto;
+  width: 200px;
+  padding: 16px;
+  background-color: black;
+  margin: 50px auto;
+  box-shadow: 10px 10px 5px grey;
+  position: relative;
+  border-radius: 15px;
+}
+
+.login {
+  background-color: black;
+  color: white;
 }
 
 .about {
-    position: absolute;
-    top: 300px;
-    height: 50px;
+    position: relative;
     width: 200px;
     background-color: black;
     color: white;
     font-size: 16px;
     cursor: pointer;
-    margin: 0 0;
     text-align: center;
     vertical-align: middle;
     box-shadow: 10px 10px 5px grey;
-
 }
 
 .abouttext {
