@@ -5,7 +5,7 @@
   <h3>TO DO LIST</h3>
 
   <div class="dropdown">
-  <button id="myBtn" class="dropbtn" ng-click="showmenu = !showmenu">New Task</button>
+  <button id="myBtn" class="bttns dropbtn" ng-click="showmenu = !showmenu">New Task</button>
   <new-task ng-show="showmenu"></new-task>
   <!-- <div class="newTask" style:" margin: 0;">
   <input id="taskdata" class="data" name="task" ng-model="text" placeholder="Enter Task">
@@ -13,7 +13,10 @@
   <button id="submit" class="submit" ng-click="postData( {text:text} )">Create Task</button>
   </div> -->
   </div>
-    <div class="about" ui-sref="about">About</div>
+
+  <div class="bttns about" ui-sref="about">About</div>
+  <a id="login" class="login" href="/auth"><button class="button-primary">{{user}}</button></a>
+  <a id="logout" class="logout" href="/auth/logout"><button class="button-primary">Logout</button></a>
 
 
 

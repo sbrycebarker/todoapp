@@ -1,5 +1,11 @@
 angular.module('myApp').controller('mainCtrl', function($scope, mainService) {
 
+    $scope.login = function() {
+      mainService.login().then((user) => {
+        $scope.user = user
+      })
+    }
+
     $scope.postData = function( data ) {
       console.log(data)
       mainService.postData( data )
@@ -35,6 +41,24 @@ angular.module('myApp').controller('mainCtrl', function($scope, mainService) {
       var newtask = item.newtask
       $scope.data[i].task = newtask
     }
+
+    $scope.getUser = function() {
+      mainService.getUser().then(function(user) {
+        console.log("user", user)
+        if (user) {
+          $scope.user = user[0].username;
+          $scope.userid = user[0].user_id
+          console.log("userinfo", $scope.user)
+          $scope.getdata();
+        } else {
+          $scope.user = 'LOG IN!';
+        }
+      })
+    }
+
+// <<===========================================INVOKES==================================>>
+
+$scope.getUser();
 
     $scope.showmenu = false;
     $scope.pageSize = 5;

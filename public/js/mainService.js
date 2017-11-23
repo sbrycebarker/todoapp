@@ -32,4 +32,31 @@ angular.module('myApp').service('mainService', function($http) {
       })
     }
 
+    this.getUser = function(res) {
+      console.log("get user")
+      return $http({
+        method: 'GET',
+        url: '/auth/me'
+      })
+      .then(function(res) {
+        return res.data;
+      })
+      .catch(function(err) {
+        console.log(err)
+      })
+
+      this.logout = function() {
+        return $http({
+          method: 'GET',
+          url: '/auth/logout'
+        })
+        .then(function(res) {
+          return res.data;
+        })
+        .catch(function(err) {
+          console.log(err);
+        })
+      }
+    }
+
 })
