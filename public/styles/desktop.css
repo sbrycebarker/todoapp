@@ -98,7 +98,6 @@ text-decoration: underline;
   height: 800px;
   width: 350px;
   position: absolute;
-  border-right: 4px solid black;
   display: flex;
   flex-direction: column;
   z-index: 5;
