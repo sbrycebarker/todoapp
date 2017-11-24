@@ -5,14 +5,16 @@
   <h3>TO DO LIST</h3>
 
 <div class="sidebar">
-  <div class="dropdown">
-  <button id="myBtn" class="dropbtn bttns" ng-click="showmenu = !showmenu">New Task</button>
-  <new-task ng-show="showmenu"></new-task>
-  </div>
-  <div class="bttns"><a id="login" class="login" href="/auth"><button class="button-primary">{{user}}</button></a></div>
-  <div class="bttns"><a id="logout" class="logout" href="/auth/logout"><button class="button-primary">Logout</button></a></div>
+<button href="/auth" class="button-primary bttns"><a id="login" class="login" href="/auth">{{user}}</a></button>
 
-  <div class="bttns about" ui-sref="about">About</div>
+<div class="dropdown">
+<button id="myBtn" class="button-primary dropbtn bttns" ng-click="showmenu = !showmenu">New Task</button>
+<new-task ng-show="showmenu"></new-task>
+</div>
+
+<button href="/auth/logout" class="button-primary bttns"><a id="logout" class="logout" href="/auth/logout">Logout</a></button>
+
+  <div class="button-primary bttns about" ui-sref="about">About</div>
 
 </div>
 
@@ -22,7 +24,7 @@
 <ul>
     <div class="task">
       <div>
-    TASK : {{data.task}} {{data.task_id}}
+    TASK : {{data.task}} {{data.task_id}} {{userid}}
       </div>
       <div>
         <img class="cal" src="./views/img/whitecal.png">  {{data.date | date : 'mediumDate' }}

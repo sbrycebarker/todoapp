@@ -51,7 +51,9 @@ const express = require('express'),
           //     console.log("data table err", err)
           //   })
           app.get('/getData', function( req, res, next) {
-            db.getsql().then( data => {
+            // console.log("data", req.user)
+            db.getsql([req.user[0].user_id]).then( data => {
+              console.log(data)
 
               res.status(200).json(data)
               // console.log(data)
@@ -59,9 +61,8 @@ const express = require('express'),
           })
           app.post('/send', function(req, res) {
             var date = moment().calendar();
-            console.log(date)
-            db.postdata([req.body.text, date], function(err, data) {
-              console.log(moment().calendar())
+            db.postdata([req.body.text, date, req.user[0].user_id], function(err, data) {
+              console.log( "data", req.body.text ,"date",moment().calendar(), req.user[0])
               if (err){
                 res.status(500).json(err)
               }else {
@@ -70,7 +71,7 @@ const express = require('express'),
             })
           })
           app.put('/change/:id', function(req, res, params) {
-            console.log(req.body)
+            // console.log(req.body)
             db.changedata([req.body.id, req.body.newtask], function (err, results) {
               res.send("hello")
             })
@@ -135,7 +136,7 @@ const express = require('express'),
 
       app.get('/auth/me', function(req, res) {
         if (!req.user) return res.sendStatus(404);
-        console.log("me", req.user)
+        // console.log("me", req.user)
         res.status(200).send(req.user);
       })
 

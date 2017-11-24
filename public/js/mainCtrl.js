@@ -20,7 +20,7 @@ angular.module('myApp').controller('mainCtrl', function($scope, mainService) {
         // console.log("cart", results.data)
       })
     }
-    $scope.getData();
+    // $scope.getData();
 
     $scope.deleteText = function(id, i) {
       console.log("delete", id , i)
@@ -49,7 +49,7 @@ angular.module('myApp').controller('mainCtrl', function($scope, mainService) {
           $scope.user = user[0].username;
           $scope.userid = user[0].user_id
           console.log("userinfo", $scope.user)
-          $scope.getdata();
+          $scope.getData();
         } else {
           $scope.user = 'LOG IN!';
         }

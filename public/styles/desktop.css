@@ -3,7 +3,6 @@ html {
 }
 
 body {
-margin: 0;
 background: url("https://source.unsplash.com/daily?water") no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
@@ -51,6 +50,7 @@ h3 {
 .box {
   margin: auto;
   position: relative;
+  top: 100px;
   height: 800px;
   width: 70%;
   background-color: white;
@@ -60,12 +60,11 @@ h3 {
   -o-background-size: cover;
   background-size: cover;
   background-color: white;
-  top: 25px;
   display: flex;
   flex-direction: column;
   border-radius: 2.5%;
   opacity: .8 inherit;
-  box-shadow: 10px 10px 5px black
+  box-shadow: 10px 10px 5px black;
 }
 
 .stuffcon {
@@ -85,7 +84,11 @@ h3 {
   background-color: black;
   border-radius: 10px;
   opacity: 1;
-  box-shadow: 10px 10px 5px white;
+  box-shadow: 10px 10px 5px grey;
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonface;
+  border-image: initial;
 }
 
 .box h3 {
@@ -114,6 +117,10 @@ text-decoration: underline;
     cursor: pointer;
     margin-top: 100px;
     box-shadow: 10px 10px 5px grey;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
 }
 
 .dropbtn:hover, .dropbtn:focus {
@@ -151,6 +158,10 @@ text-decoration: underline;
     text-align: center;
     vertical-align: middle;
     box-shadow: 10px 10px 5px grey;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
 }
 
 .abouttext {
@@ -189,7 +200,7 @@ text-decoration: underline;
 .trash {
   height: 10px;
   width: 45px;
-  background-color: white;
+  background-color: inherit;
   cursor: pointer;
   border-radius: 20%;
   margin: auto;
@@ -199,7 +210,7 @@ text-decoration: underline;
 
 i {
   margin: auto;
-  color: black;
+  color: inherit;
   font-size: 50px
 }
 
@@ -207,6 +218,11 @@ i {
   cursor: pointer;
   background-color: white;
   border-radius: 5px;
+}
+
+.change:hover {
+  background-color: black;
+  color: white
 }
 
 .delete {
@@ -223,6 +239,12 @@ i {
   right: 55px;
   margin: auto;
 }
+
+.delete:hover {
+  background-color: black;
+  color: white;
+}
+
 .show {
   display:block;
 }

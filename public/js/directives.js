@@ -21,7 +21,7 @@ angular.module('myApp').directive('newTask', function() {
     <div class="newTask" style:" margin: 0;">
     <input id="taskdata" class="data" name="task" ng-model="text" placeholder="Enter Task">
 
-    <button id="submit" class="submit" ng-click="postData( {text:text} ); showmenu = !showmenu">Create Task</button>
+    <button id="submit" class="submit" ng-click="postData( {text:text, user_id: userid} ); showmenu = !showmenu">Create Task</button>
     </div>
 
      `

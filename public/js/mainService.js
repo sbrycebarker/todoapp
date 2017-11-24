@@ -2,6 +2,7 @@ angular.module('myApp').service('mainService', function($http) {
 
 
     this.postData = function(data) {
+      console.log(data)
       return $http({
         method: 'POST',
         url: '/send',
