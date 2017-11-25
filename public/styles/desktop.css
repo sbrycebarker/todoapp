@@ -37,7 +37,7 @@ h1 {
 
 .newTask {
   height: 80px;
-  width: 167px;
+  width: 170px;
   top: 46px;
   position: absolute;
   background-color: black;
@@ -78,7 +78,6 @@ h3 {
   top: 100px;
   height: 800px;
   width: 70%;
-  background-color: white;
   background: url("../views/img/smoke.png") no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -165,6 +164,10 @@ h3 {
   border-radius: 15px;
   color: white;
   cursor: grab;
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonface;
+  border-image: initial;
 }
 
 .login {

@@ -35,11 +35,15 @@ angular.module('myApp').controller('mainCtrl', function($scope, mainService) {
     }
 
     $scope.changeData = function( item, i) {
-      console.log(item, i)
+      console.log(item)
+      if (item.newtask == undefined) {
+        alert ("enter text to change task")
+      } else {
       mainService.changeData(item)
       // console.log(item)
       var newtask = item.newtask
       $scope.data[i].task = newtask
+    }
     }
 
     $scope.getUser = function() {
