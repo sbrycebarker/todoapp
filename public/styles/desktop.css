@@ -3,11 +3,23 @@ html {
 }
 
 body {
-background: url("https://source.unsplash.com/daily?water") no-repeat center center fixed;
+background: url("https://source.unsplash.com/daily?nature") no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
+}
+
+a h1 {
+  margin: auto;
+  font-size: inherit;
+  text-align: center;
+}
+
+h1 {
+  margin: auto;
+  font-size: inherit;
+  text-align: center;
 }
 
 .pagenav {
@@ -25,13 +37,26 @@ background-size: cover;
 
 .newTask {
   height: 80px;
-  width: 200px;
+  width: 167px;
+  top: 46px;
   position: absolute;
-  background-color: grey;
-  margin-top: -50px;
-  margin-bottom: 15px;
+  background-color: black;
+  color: black;
+  border-radius: 0 0 15px 15px;
   text-shadow: 10px 10px 5px black;
+  text-align: center;
 }
+
+.newTask:hover {
+  cursor: grab;
+}
+
+.submit {
+  top: 15px;
+  position: relative;
+  margin: auto;
+}
+
 .update {
   margin-bottom: 10px;
 }
@@ -92,9 +117,9 @@ h3 {
 }
 
 .box h3 {
-color: black;
-text-align: center;
-text-decoration: underline;
+  color: black;
+  text-align: center;
+  text-decoration: underline;
 }
 
 .sidebar {
@@ -111,11 +136,9 @@ text-decoration: underline;
     width: 200px;
     background-color: black;
     color: white;
-    padding: 16px;
+    /*padding: 16px;*/
     font-size: 16px;
-    border: none;
     cursor: pointer;
-    margin-top: 100px;
     box-shadow: 10px 10px 5px grey;
     border-width: 2px;
     border-style: outset;
@@ -128,7 +151,6 @@ text-decoration: underline;
 }
 
 .dropdown {
-  margin: 0 auto;
   text-shadow: 10px 10px 5px black;
 }
 
@@ -137,10 +159,12 @@ text-decoration: underline;
   width: 200px;
   padding: 16px;
   background-color: black;
-  margin: 50px auto;
+  margin: auto;
   box-shadow: 10px 10px 5px grey;
   position: relative;
   border-radius: 15px;
+  color: white;
+  cursor: grab;
 }
 
 .login {
@@ -153,7 +177,7 @@ text-decoration: underline;
     width: 200px;
     background-color: black;
     color: white;
-    font-size: 16px;
+    font-size: 24px;
     cursor: pointer;
     text-align: center;
     vertical-align: middle;
@@ -177,6 +201,7 @@ text-decoration: underline;
 .abouttext h1 {
   margin: 10px;
   color: white;
+  font-size: 35px;
   text-decoration: underline;
 }
 

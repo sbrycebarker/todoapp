@@ -5,18 +5,21 @@
   <h3>TO DO LIST</h3>
 
 <div class="sidebar">
-<button href="/auth" class="button-primary bttns"><a id="login" class="login" href="/auth">{{user}}</a></button>
+<a class="button-primary bttns" href="/auth"><h1>{{user}}</h1></a>
 
-<div class="dropdown">
-<button id="myBtn" class="button-primary dropbtn bttns" ng-click="showmenu = !showmenu">New Task</button>
+<button class="dropdown button-primary bttns">
+  <div ng-click="showmenu = !showmenu">
+    <h1>New Task</h1>
+  </div>
 <new-task ng-show="showmenu"></new-task>
+</button>
+
+<a class="button-primary bttns" href="/auth/logout"><h1>Logout</h1></a>
+
+  <button class="button-primary bttns" ui-sref="about"><h1>About<h1></button>
+
 </div>
 
-<button href="/auth/logout" class="button-primary bttns"><a id="logout" class="logout" href="/auth/logout">Logout</a></button>
-
-  <div class="button-primary bttns about" ui-sref="about">About</div>
-
-</div>
 
 
 <div class="stuffcon">
