@@ -103,6 +103,7 @@ h3 {
 .stuff {
   margin: 10px auto;
   position: relative;
+  padding: 5px;
   height: auto;
   width: 400px;
   background-color: black;
