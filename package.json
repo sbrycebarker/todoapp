@@ -18,7 +18,6 @@
   "homepage": "https://github.com/sbrycebarker/todoapp#readme",
   "dependencies": {
     "angular-ui-bootstrap": "^2.5.0",
-    "auth0-js": "^8.11.3",
     "body-parser": "^1.17.1",
     "cors": "^2.8.3",
     "express": "^4.15.2",
@@ -26,10 +25,9 @@
     "massive": "^4.4.0",
     "moment": "^2.18.1",
     "passport": "^0.4.0",
+    "passport-auth0": "^0.6.1",
     "request": "^2.81.0",
     "session": "^0.1.0"
   },
-  "devDependencies": {
-    "passport-auth0": "^0.6.1"
-  }
+  "devDependencies": {}
 }
